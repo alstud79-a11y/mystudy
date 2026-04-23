@@ -1,31 +1,232 @@
 @charset "utf-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-
-body{
-    font-family: "Noto Sans", sans-serif;
-    font-size: 18px;
-    color: #121212;
+body {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 18px;
+  color: #121212;
 }
-.ffJosefin{ 
-    font-family: "Josefin sans", sans-serif;
+.ffJosefin {
+  font-family: 'Josefin Sans',sans-serif;
 }
-
-.innerWrap{
-    border: 4px solid lightblue;
-    width: 1240px;
-    margin: 0 auto;
-    padding: 80px 20px 0;
+.innerWrap {
+  width: 1240px;
+  margin: 0 auto;
+  padding: 80px 20px 0;
 }
 
-main h2{
-    text-align: center;
+a {
+text-decoration: none;
+
+}
+
+main h2 {
+  text-align: center;
+  font-size: 60px;
+  letter-spacing: .05em;
+  margin-bottom: 80px;
+}
+header {
+  background: url(../css/assets/hero.jpg) no-repeat right center/cover;
+}
+header .innerWrap {
+  height: 720px;
+  position: relative;
+}
+header h1 {
+  padding-top: 120px;
+}
+header .scroll {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+header .scroll img {
+  margin-top: 8px;
+}
+header nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 1240px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+.msgSec {
+  background-color: #fbfaf7;
+}
+.msgSec p {
+  text-align: center;
+  line-height: 1.75;
+  margin-bottom: 40px;
+}
+.msgSec p.illust {
+  margin-top: 80px;
+  margin-bottom: 0;
+  position: relative;
+}
+.msgSec p.illust::before {
+  content: url(../css/assets/deco_left.png);
+  position: absolute;
+  left: 320px;
+  bottom: -30px;
+}
+.msgSec p.illust::after {
+  content: url(../css/assets/deco_right.png);
+  position: absolute;
+  right: 320px;
+  bottom: -30px;
+}
+/* dateSec */
+.dateSec {
+  background-color: #ffffff;
+  padding-bottom: 120px;
+}
+.dateSec .layoutWrap {
+  display: flex;
+  /* 내가 품고 있는 자식에게 자유를 준다 */
+
+}
+.dateSec .layoutWrap > p {
+  flex-basis: 735px;
+  /* flex-basis 차지할 “출발 크기” */
+}
+.dateSec .layoutWrap > div {
+  flex-basis: 465px;
+  padding-top: 100px;
+}
+.dateSec .dateDetailSec {
+    font-size: 72px;
+    margin: 0 0 170px -100px;
+    background-color: #ffffff;
+    padding: 40px 64px;
+    line-height: 1.2;
+}
+
+.word1 {
+    font-size: 50px;
+}
+.word2{
+    font-size: 40px;
+}
+.word3{
     font-size: 60px;
-    letter-spacing: 0.05em;
-    /* 글자와 글자간격사이 
-    em : 현재 폰트 크기에 비례한다
-    폰트 크기가 커지면 간격도 자동으로 비례해서
-    늘어난다
-    0.04 ~0.12 폰트 간격이 적절하게 이쁘게 보임*/    
-    margin-bottom: 80px;
 }
+
+.accessSec {
+    margin-left: 48px;
+}
+
+.accessSec h3 {
+    font-size: 55px;
+    color: #cfafa3;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+
+}
+
+.accessSec p {
+    line-height: 1.6;
+}
+
+.formSec {
+    background-color: #efe8d9;
+    padding-bottom: 60px;
+
+}
+
+form {
+    width: 600px;
+    margin: 0 auto;
+}
+/* 똑같은 명령어를 하기 싫어서 공통적으로 적용함
+    ,콤마 연결해서 씀 */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    width: 100%;
+    margin-top: 5px;
+    padding: 4px 8px;
+    
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    vertical-align: baseline;
+}
+
+.attendRadio {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.attendRadi label {
+    margin: 0 20px;
+    font-size: 24px;
+}
+
+.allergyCheck label {
+    margin-right: 24px;
+}
+
+
+select {
+    background: url(../css/assets/arrow.png) no-repeat 98% 50%/17px 10px;
+                                             /* 이미/반복/위치(x y)/ 크기 */
+    /* />>>>> 백그라운드 사이즈
+    " arrow.png 이미지를 반복없이 오른쪽 끝(98%) + 세로 중앙(50%)에 배치하고
+    크기는 17X10px로 표시한다. */
+}
+.submitBtn {
+    text-align: center;
+    
+}
+
+input[type="submit"] {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 18px 80px;
+    
+}
+textarea {
+    margin-bottom: 30px;
+
+}
+
+.dateSec{
+    margin-bottom: 480px;
+    
+}
+
+/* 패럴랙스(Parallax): 
+스크롤할 때 배경과 내용이 서로 다른 속도로 움직이는 효과 */
+.dateSec::after {
+    content: "";
+    /* before after에서 필수로 content 써야함 
+    content에 "" 없다라는 뜻*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../css/assets/bg.jpg)no-repeat center/cover;
+    z-index: -1;
+}
+
+
